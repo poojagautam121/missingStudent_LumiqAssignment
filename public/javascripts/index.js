@@ -71,7 +71,6 @@ $(document).ready(function () {
   $("#span_missing").hide();
 
   $("#noOfStudents").keypress(function (e) {
-    console.log("==keypress==");
     $("#noOfStudents").removeClass("inputAlertStatus");
     $("#spanHideShow").hide();
     $(".disableButton").attr("disabled", false);
@@ -95,7 +94,6 @@ function missingStudentExist() {
   let queues = {};
   let count = $("#noOfStudents").val();
   for (var i = 1; i <= count; i++) {
-    console.log($(`#student_${i}`).val());
     if ($(`#student_${i}`).val() != "") {
       names.push($(`#student_${i}`).val());
     }
@@ -150,7 +148,6 @@ function missingStudentAJXCall(count, names, queues) {
     type: "GET",
     data: { totalCount: count, queues: queues, names: names },
     success: function (response) {
-      console.log("response======", response);
       showMissingStudentRow(response);
     },
     fail: function (error) {

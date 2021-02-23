@@ -7,18 +7,11 @@ console.log("config", config);
 let isAlter = true;
 module.exports = {
   manageDatabase: function () {
-    // tableList.forEach((t) => {
-    //   console.log("table name =", t);
-    //   db[t]
-    //     .sync({ [config.db.models]: true })
     db.sequelize
       .sync({ alter: true }) //create all the defined tables in the specified database.
-      .then((result) => {
-        console.log("====Databses updated====");
-      })
+      .then((result) => {})
       .catch((e) => {
         console.log("===error in db ===", e);
       });
-    // });
   },
 };
