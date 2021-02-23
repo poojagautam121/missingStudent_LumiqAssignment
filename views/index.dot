@@ -1,0 +1,93 @@
+---
+layout : layout.dot 
+---
+
+[[##body:
+<style type="text/css">
+.margin15px{
+    margin-top:15;
+    margin-bottom:15;
+    margin-left:50px;
+}
+.margin10px{
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.inputAlertStatus{
+    border-color: red;
+}
+.inputAlertStatusAfter{
+    border-color: none;
+}
+
+.input_error{
+    color: red;
+    font-size: 15px;
+    padding-left: 5px;
+    right: 10px;
+    float: left;
+    position: relative;
+}
+</style>
+<div class="container-fluid">
+
+<div class ="col-md-12 margin15px">
+   <div class="col-md-4 margin15px ">
+       <label for="validationCustom01" class="form-label onlyNumbers ">Number Of Students</label>
+           <input type="text" class="form-control" id="noOfStudents" value="" maxlength="2" required/>
+                <span class="input_error" id="spanHideShow"></span>
+   </div>
+    <div class="col-md-4 ">
+
+    </div>
+    <div class="col-md-4 ">
+
+    </div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="col-12 margin15px">
+    <button class="btn btn-primary disableButton" onclick="AddStudentRow()">Add Student Name</button>
+  
+    <div id="studentRow">
+ 
+    </div>
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="col-12 margin15px">
+    <button class="btn btn-primary disbledQueueButton" onclick="AddStudentInQueue()">Add Student In Queue</button>
+   <span class="input_error" id="span_queue"></span>
+    <div id="studentInQueue">
+ 
+    </div>
+</div>
+</div>
+
+<div class="container-fluid">
+<div class="col-12 margin15px">
+ <span class="input_error" id="span_missing"></span>
+    <button class="btn btn-primary" onclick="missingStudent()">Missing Student</button>
+
+     <div id="missingStudents">
+ 
+     </div>
+</div>
+</div>
+
+
+#]]
+
+[[##pageScripts:
+<script>
+
+</script>
+
+#]]
+
+[[##pageCSS:
+
+
+#]]
